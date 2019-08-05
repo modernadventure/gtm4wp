@@ -352,7 +352,7 @@ function gtm4wp_woocommerce_datalayer_filter_items( $dataLayer ) {
 				}
 			}
 		}
-	} elseif ( is_cart() ) {
+  } elseif ( is_cart() && !is_order_received_page() ) {
 		if ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCREMARKETING ] || $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCEECCARTASFIRSTSTEP ] ) {
 			$gtm4wp_cart_products             = array();
 			$gtm4wp_cart_products_remarketing = array();
