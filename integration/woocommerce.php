@@ -536,7 +536,7 @@ function gtm4wp_woocommerce_datalayer_filter_items( $data_layer ) {
 					);
 			}
 		}
-	} elseif ( is_cart() ) {
+	} elseif ( is_cart() && !is_order_received_page() ) {
 		// Cart page data layer content.
 
 		if ( $gtm4wp_options[ GTM4WP_OPTION_INTEGRATE_WCTRACKECOMMERCE ] ) {
